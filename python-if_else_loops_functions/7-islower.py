@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+
 def islower(c):
     # Check if c is between 'a' and 'z' in ASCII values
-    if ord('a') <= ord(c) <= ord('z'):
+    if 'a' <= c <= 'z':
         return True
     else:
         return False
