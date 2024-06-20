@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
-# Print numbers 00 to 09
-print(", ".join("{:02}".format(i) for i in range(10)), end=", ")
-
-# Print numbers 10 to 99
-print(", ".join("{:02}".format(i) for i in range(10, 100)))
+# Loop through numbers from 0 to 99
+for i in range(100):
+    # Format each number to have two digits
+    formatted_number = "{:02}".format(i)
+    
+    # Print the formatted number followed by ", " except for the last number
+    if i < 99:
+        print(formatted_number + ", ", end="")
+    else:
+        print(formatted_number)  # Print the last number with a newline
