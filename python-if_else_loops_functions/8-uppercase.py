@@ -8,7 +8,7 @@ def uppercase(s):
             result += chr(ord(char) - 32)
         else:
             result += char
-    print(result)
+    print("{}".format(result))  # Using string formatting
 
 # Test cases (for standalone testing)
 if __name__ == "__main__":
