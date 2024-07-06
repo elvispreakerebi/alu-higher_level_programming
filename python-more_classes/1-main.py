@@ -1,9 +1,6 @@
 #!/usr/bin/python3
 """
-This script demonstrates the usage of the Rectangle class.
-
-It creates a Rectangle instance, prints its initial state, updates its width 
-and height, and then prints its updated state.
+This script tests the Rectangle class from the module 1-rectangle.
 """
 
 Rectangle = __import__('1-rectangle').Rectangle
