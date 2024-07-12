@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" This is the script """
 class Square:
     """Represents a square with a private instance attribute size."""
     
