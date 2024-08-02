@@ -1,5 +1,3 @@
 #!/bin/bash
-# Check if URL is provided as an argument
-#!/bin/bash
-curl -s "$1" -o response.txt
-wc -c < response.txt
+# Sends a request to the URL and displays the size of the response body in bytes
+curl -s "$1" | wc -c
