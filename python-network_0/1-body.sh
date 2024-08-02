@@ -1,3 +1,3 @@
 #!/bin/bash
 # Sends a GET request to the URL and displays the body of a 200 status code response
-curl -s -o response_body.txt -w "%{http_code}" "$1" | grep -q 200 && cat response_body.txt
+curl -sL -w "%{http_code}" "$1" -o temp_body | { read code; [ "$code" -eq 200 ] && cat temp_body; rm -f temp_body; }
