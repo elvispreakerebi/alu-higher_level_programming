@@ -4,7 +4,7 @@
 -- The script does not use the JOIN keyword.
 -- The database name will be passed as an argument of the mysql command.
 
-SELECT cities.name
+SELECT cities.id, cities.name
 FROM cities
 WHERE cities.state_id = (
   SELECT states.id
