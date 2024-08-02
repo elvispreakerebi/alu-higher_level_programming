@@ -4,13 +4,11 @@
 -- The script does not use the JOIN keyword.
 -- The database name will be passed as an argument of the mysql command.
 
--- Select the state id of California from the states table
-SELECT @california_state_id := id
-FROM states
-WHERE name = 'California';
-
--- Select all the cities of California sorted by cities.id in ascending order
-SELECT id, name
+SELECT cities.name
 FROM cities
-WHERE state_id = @california_state_id
-ORDER BY id ASC;
+WHERE cities.state_id = (
+  SELECT states.id
+  FROM states
+  WHERE states.name = 'California'
+)
+ORDER BY cities.id ASC;
