@@ -1,20 +1,17 @@
 #!/usr/bin/python3
-"""Documented now"""
-import requests
-import requests.auth
+"""I documented you"""
+
+import urllib.request
+import urllib.parse
 import sys
 
 if __name__ == '__main__':
-    username = sys.argv[1]
-    password = sys.argv[2]
-    response = requests.get(
-        url="https://api.github.com/user",
-        auth=(requests.auth.HTTPBasicAuth(
-            username,
-            password
-        )))
-    try:
-        json_response = response.json()
-        print("{}".format(json_response["id"]))
-    except:
-        print(None)
+    """"Documented"""
+    url = sys.argv[1]
+    values = {"email": sys.argv[2]}
+    data = urllib.parse.urlencode(values)
+    data = data.encode('ascii')  # data should be bytes
+    req = urllib.request.Request(url, data)
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+        print("{}".format(content.decode("utf-8")))
