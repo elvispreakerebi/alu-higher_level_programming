@@ -9,7 +9,3 @@ function argFinder (...args) {
     console.log('Arguments found');
   }
 }
-
-argFinder();
-argFinder(1);
-argFinder('food', 2);
