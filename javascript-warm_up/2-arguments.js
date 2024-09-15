@@ -1,6 +1,6 @@
 #!/usr/bin/node
 
-const args = process.argv.slice(2);  // Get arguments passed to the script, excluding the first two default ones.
+const args = process.argv.slice(2);
 
 if (args.length === 0) {
   console.log('No argument');
